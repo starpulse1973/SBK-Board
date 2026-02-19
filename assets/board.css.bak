@@ -1,0 +1,256 @@
+/* SBK Board – Front-end Styles */
+
+/* ── Container ─────────────────────────────────────── */
+.sbkboard { font-size: 14px; line-height: 1.6; color: #333; }
+.sbkboard *, .sbkboard *::before, .sbkboard *::after { box-sizing: border-box; }
+
+/* ── Toolbar (search / write button) ───────────────── */
+.sbkboard-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    gap: 8px;
+}
+.sbkboard-search { display: flex; gap: 4px; }
+.sbkboard-search input[type="text"] {
+    padding: 6px 10px;
+    border: 1px solid #ccd0d4;
+    border-radius: 3px;
+    font-size: 13px;
+    min-width: 180px;
+}
+.sbkboard-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 14px;
+    font-size: 13px;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: background 0.15s;
+}
+.sbkboard-btn-primary   { background:#0073aa; color:#fff; border-color:#0073aa; }
+.sbkboard-btn-primary:hover { background:#006799; }
+.sbkboard-btn-secondary { background:#f6f7f7; color:#333; border-color:#ccd0d4; }
+.sbkboard-btn-secondary:hover { background:#eee; }
+.sbkboard-btn-danger    { background:#d63638; color:#fff; border-color:#d63638; }
+.sbkboard-btn-danger:hover { background:#b32d2e; }
+.sbkboard-btn-sm { padding: 3px 10px; font-size: 12px; }
+
+/* ── Post list table ────────────────────────────────── */
+.sbkboard-list { width: 100%; border-collapse: collapse; margin-bottom: 8px; }
+.sbkboard-list th,
+.sbkboard-list td { padding: 8px 10px; border-bottom: 1px solid #e5e5e5; vertical-align: middle; }
+.sbkboard-list thead th {
+    background: #f6f7f7;
+    font-weight: 600;
+    font-size: 12px;
+    text-align: center;
+    white-space: nowrap;
+}
+.sbkboard-list tbody tr:hover { background: #f9f9f9; }
+
+.sbkboard-list .col-num     { width: 56px; text-align: center; }
+.sbkboard-list .col-title   { }
+.sbkboard-list .col-author  { width: 90px; 56px; text-align: center; }
+.sbkboard-list .col-date    { width: 90px; 56px; text-align: center; white-space: nowrap; }
+.sbkboard-list .col-views   { width: 56px; text-align: center; }
+.sbkboard-list .col-votes   { width: 56px; text-align: center; }
+
+.sbkboard-notice-badge {
+    display: inline-block;
+    background: #0073aa;
+    color: #fff;
+    font-size: 11px;
+    padding: 1px 6px;
+    border-radius: 2px;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+.sbkboard-secret-badge {
+    display: inline-block;
+    background: #888;
+    color: #fff;
+    font-size: 11px;
+    padding: 1px 6px;
+    border-radius: 2px;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+.sbkboard-reply-indicator { color: #0073aa; margin-right: 4px; }
+.sbkboard-depth-indent { display: inline-block; }
+
+/* ── Pagination ─────────────────────────────────────── */
+.sbkboard-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    margin: 12px 0;
+    flex-wrap: wrap;
+}
+.sbkboard-pagination a,
+.sbkboard-pagination span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    height: 32px;
+    padding: 0 8px;
+    border: 1px solid #ccd0d4;
+    border-radius: 3px;
+    font-size: 13px;
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+}
+.sbkboard-pagination .current { background:#0073aa; color:#fff; border-color:#0073aa; }
+.sbkboard-pagination a:hover { background:#f0f0f0; }
+
+/* ── Post view ──────────────────────────────────────── */
+.sbkboard-post-wrap { margin-bottom: 24px; }
+.sbkboard-post-header {
+    border-top: 2px solid #0073aa;
+    border-bottom: 1px solid #ddd;
+    padding: 14px 0 10px;
+    margin-bottom: 16px;
+}
+.sbkboard-post-title { font-size: 18px; font-weight: 700; margin: 0 0 8px; }
+.sbkboard-post-meta  { display: flex; gap: 16px; font-size: 12px; color: #777; flex-wrap: wrap; }
+.sbkboard-post-content { min-height: 120px; line-height: 1.8; margin-bottom: 20px; }
+
+/* Attachments */
+.sbkboard-attachments { margin-bottom: 16px; }
+.sbkboard-attachments ul { margin: 0; padding: 0; list-style: none; }
+.sbkboard-attachments li { padding: 4px 0; font-size: 13px; }
+.sbkboard-attachments a { color: #0073aa; }
+
+/* Vote */
+.sbkboard-vote-bar {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin: 16px 0;
+}
+.sbkboard-vote-btn {
+    background: none;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 4px 14px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: all .15s;
+}
+.sbkboard-vote-btn:hover { background: #f0f0f0; }
+.sbkboard-vote-btn.voted { background:#0073aa; color:#fff; border-color:#0073aa; }
+.sbkboard-vote-count { font-weight: 600; }
+
+/* Post action buttons */
+.sbkboard-post-actions { display: flex; gap: 8px; justify-content: flex-end; margin-top: 16px; flex-wrap: wrap; }
+
+/* ── Write / Edit form ──────────────────────────────── */
+.sbkboard-form-wrap { margin-bottom: 24px; }
+.sbkboard-form-wrap label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 4px; }
+.sbkboard-form-wrap input[type="text"],
+.sbkboard-form-wrap input[type="password"],
+.sbkboard-form-wrap select,
+.sbkboard-form-wrap textarea {
+    width: 100%;
+    padding: 7px 10px;
+    border: 1px solid #ccd0d4;
+    border-radius: 3px;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+.sbkboard-form-wrap textarea { min-height: 240px; resize: vertical; }
+.sbkboard-form-row { margin-bottom: 14px; }
+.sbkboard-form-inline { display: flex; gap: 12px; align-items: center; }
+.sbkboard-form-actions { display: flex; gap: 8px; justify-content: flex-end; margin-top: 8px; }
+
+/* File attach */
+.sbkboard-attach-area {
+    border: 1px dashed #ccc;
+    padding: 12px;
+    border-radius: 3px;
+    margin-bottom: 12px;
+    font-size: 12px;
+    color: #888;
+}
+
+/* ── Comments ───────────────────────────────────────── */
+.sbkboard-comments { border-top: 1px solid #ddd; padding-top: 16px; }
+.sbkboard-comment-item {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+    display: flex;
+    gap: 10px;
+}
+.sbkboard-comment-item.is-reply { padding-left: 32px; background: #fafafa; }
+.sbkboard-comment-meta { font-size: 12px; color: #888; margin-bottom: 4px; }
+.sbkboard-comment-content { font-size: 13px; }
+.sbkboard-comment-form { margin-top: 16px; }
+.sbkboard-comment-form textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ccd0d4;
+    border-radius: 3px;
+    font-size: 13px;
+    min-height: 80px;
+    resize: vertical;
+    margin-bottom: 8px;
+}
+
+/* ── Password prompt ────────────────────────────────── */
+.sbkboard-password-form {
+    max-width: 360px;
+    margin: 40px auto;
+    padding: 24px;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+    text-align: center;
+}
+.sbkboard-password-form input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin: 12px 0 8px;
+    border: 1px solid #ccd0d4;
+    border-radius: 3px;
+}
+
+/* ── Loading / messages ─────────────────────────────── */
+.sbkboard-loading { text-align: center; padding: 32px; color: #aaa; font-size: 13px; }
+.sbkboard-msg {
+    padding: 10px 14px;
+    border-radius: 3px;
+    margin-bottom: 12px;
+    font-size: 13px;
+}
+.sbkboard-msg-error   { background:#fce8e8; border-left:4px solid #d63638; }
+.sbkboard-msg-success { background:#edfaef; border-left:4px solid #00a32a; }
+.sbkboard-msg-info    { background:#f0f6fc; border-left:4px solid #72aee6; }
+
+/* ── Gallery skin ───────────────────────────────────── */
+.sbkboard-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 16px;
+}
+.sbkboard-gallery-item {
+    border: 1px solid #eee;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: box-shadow .2s;
+}
+.sbkboard-gallery-item:hover { box-shadow: 0 2px 8px rgba(0,0,0,.12); }
+.sbkboard-gallery-thumb {
+    aspect-ratio: 4/3;
+    background: #f0f0f0;
+    overflow: hidden;
+}
+.sbkboard-gallery-thumb img { width:100%; height:100%; object-fit:cover; display:block; }
+.sbkboard-gallery-info { padding: 8px 10px; font-size: 12px; }
+.sbkboard-gallery-info .title { font-weight: 600; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.sbkboard-gallery-info .meta  { color: #888; margin-top: 2px; }

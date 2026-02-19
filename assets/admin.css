@@ -1,0 +1,131 @@
+/* SBK Board - Admin UI */
+.sbkboard-admin.wrap {
+    max-width: 1100px;
+}
+
+.sbkboard-admin h1 {
+    margin-bottom: 14px;
+}
+
+.sbkboard-admin .widefat td {
+    vertical-align: middle;
+}
+
+.sbkboard-admin .nav-tab-wrapper {
+    margin: 14px 0 18px;
+}
+
+.sbkboard-admin .nav-tab {
+    background: #f1f1f1;
+    border: 1px solid #ccd0d4;
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+    color: #1d2327;
+    padding: 8px 14px;
+    font-weight: 500;
+}
+
+.sbkboard-admin .nav-tab:hover {
+    background: #e2e4e7;
+}
+
+.sbkboard-admin .nav-tab.nav-tab-active {
+    background: #ffffff;
+    border-bottom: 1px solid #ffffff;
+    font-weight: 600;
+}
+
+.sbkboard-admin form {
+    background: #fff;
+    border: 1px solid #dcdcde;
+    border-radius: 12px;
+    padding: 18px 18px 12px;
+}
+
+.sbkboard-panel {
+    display: none;
+    margin-top: 12px;
+}
+
+.sbkboard-panel.is-active {
+    display: block;
+}
+
+.sbkboard-admin .form-table th {
+    width: 240px;
+    padding: 14px 10px 14px 0;
+}
+
+.sbkboard-admin .form-table td {
+    padding: 10px 10px 10px 0;
+}
+
+.sbkboard-design-table .sbkboard-group-heading th {
+    padding: 18px 0 8px;
+    border-top: 1px solid #ebecee;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1d2327;
+}
+
+.sbkboard-design-table .sbkboard-group-heading:first-child th {
+    border-top: 0;
+    padding-top: 4px;
+}
+
+.sbkboard-admin input[type="text"],
+.sbkboard-admin input[type="number"],
+.sbkboard-admin select,
+.sbkboard-admin textarea {
+    border-radius: 8px;
+}
+
+.sbkboard-admin .description {
+    color: #646970;
+}
+
+.sbkboard-admin .submit {
+    padding-top: 12px;
+    margin-top: 10px;
+    border-top: 1px solid #f0f0f1;
+}
+
+.sbkboard-admin .button-primary {
+    border-radius: 10px;
+    padding: 6px 14px;
+}
+
+.sbkboard-section {
+    padding: 8px 12px 2px;
+    background: #f6f7f7;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    margin: 10px 0 14px;
+}
+
+.sbkboard-section__title {
+    margin: 0 0 4px;
+    font-size: 14px;
+}
+
+.sbkboard-section__desc {
+    margin: 0;
+    color: #646970;
+}
+
+.sbkboard-shortcodes {
+    margin: 0 0 14px;
+    padding: 10px 12px;
+    border-left: 4px solid #2271b1;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #f0f0f1;
+}
+
+.sbkboard-shortcodes p {
+    margin: 0 0 6px;
+}
+
+.sbkboard-shortcodes p:last-child {
+    margin-bottom: 0;
+}
